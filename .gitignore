@@ -1,0 +1,30 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Runtime data
+ideathon.db
+*.sqlite
+*.sqlite3
+uploads/
+
+# Logs
+*.log
+logs/
+
+# Editor/system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
