@@ -55,7 +55,7 @@ ALGORITHM = "HS256"
 def get_db():
     # Old relative DB path:
     # conn = sqlite3.connect("ideathon.db")
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     try:
         yield conn
@@ -65,7 +65,7 @@ def get_db():
 def init_db():
     # Old relative DB path:
     # conn = sqlite3.connect("ideathon.db")
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
     c = conn.cursor()
 
     c.execute("""CREATE TABLE IF NOT EXISTS users (
